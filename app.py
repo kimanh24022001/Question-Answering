@@ -19,21 +19,9 @@ def home():
 if __name__=="__main__":
     app.run(debug=True)
 '''
-from pyexpat.errors import messages
 from flask import Flask, render_template,request, redirect, url_for
-from wtforms import FileField, SubmitField
-from flask_wtf import FlaskForm
-from werkzeug.utils import secure_filename
-import os
-from pdf2image import convert_from_path
-import easyocr
-import numpy as np
-import PIL
-from IPython.display import display, Image
-from PIL import ImageDraw
-import spacy
-from wtforms.validators import InputRequired
 import PyPDF2
+import os
 from transformers import AutoTokenizer,AutoModelForQuestionAnswering,pipeline
 app = Flask(__name__)
 app.config['SECRET_KEY']='supersecretkey'
