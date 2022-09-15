@@ -46,18 +46,7 @@ def home():
     
     if request.method=="POST":
         f = request.files['File'] 
-        f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
-        pdfFileObj = open(os.path.join(app.config['UPLOAD_FOLDER'], f.filename), 'rb')
-        pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
-        pageObj = pdfReader.getPage(0)
-        extract = pageObj.extractText()
-        if len(str(request.form.get("para")))>4:
-            tokenizer = AutoTokenizer.from_pretrained("D:\\Python\\code\\QA\\best_model")
-            model = AutoModelForQuestionAnswering.from_pretrained("D:\\Python\\code\\QA\\best_model")
-            question_answerer = pipeline("question-answering", model = model, tokenizer= tokenizer)
-            return render_template('index_document.html',note='See the results. You want it?  ',qa=extract,para=request.form.get("para"),message=question_answerer(question=extract, context = request.form.get("para"))['answer'])
-        else:
-            return render_template('index_document.html',note='Please upload for question',para=extract)
+        
     return render_template('index_document.html',note='Please upload for paragraph')
 if __name__=="__main__":
     app.run(debug=True)
