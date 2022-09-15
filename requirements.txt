@@ -2,5 +2,5 @@ flask
 PyPDF2
 transformers
 gunicorn
-http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl
+http://download.pytorch.org/whl/cpu/torch/torch-1.12.1-cp39-cp39-manylinux2014_aarch64.whl
 TensorFlow
