@@ -3,4 +3,4 @@ PyPDF2
 transformers
 gunicorn
 -f https://download.pytorch.org/whl/torch_stable.html
-TensorFlow
+tensorflow-cpu==2.5.0
