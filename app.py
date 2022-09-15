@@ -23,7 +23,6 @@ from pyexpat.errors import messages
 from flask import Flask, render_template,request, redirect, url_for
 from wtforms import FileField, SubmitField
 from flask_wtf import FlaskForm
-import nltk
 from werkzeug.utils import secure_filename
 import os
 from pdf2image import convert_from_path
@@ -36,7 +35,6 @@ import spacy
 from wtforms.validators import InputRequired
 import PyPDF2
 from transformers import AutoTokenizer,AutoModelForQuestionAnswering,pipeline
-nltk.download('vader_lexicon')
 app = Flask(__name__)
 app.config['SECRET_KEY']='supersecretkey'
 UPLOAD_FOLDER = 'static'
