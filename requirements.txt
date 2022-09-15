@@ -2,3 +2,5 @@ flask
 PyPDF2
 transformers
 gunicorn
+PyTorch
+TensorFlow
