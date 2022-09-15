@@ -2,10 +2,5 @@ flask
 PyPDF2
 transformers
 gunicorn
--f https://download.pytorch.org/whl/torch_stable.html
-torch==1.8.1+cpu 
-torchvision==0.9.1+cpu
-fastai>=2.3.1
-ipywidgets
-voila
+http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl
 TensorFlow
