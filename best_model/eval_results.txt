@@ -1,4 +1,0 @@
-correct = 399
-eval_loss = -7.21484375
-incorrect = 141
-similar = 270
