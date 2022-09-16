@@ -2,5 +2,5 @@ flask
 PyPDF2
 transformers
 gunicorn
-pytorch-cpu
+-f https://download.pytorch.org/whl/torch_stable.html
 tensorflow-cpu
