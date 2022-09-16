@@ -10,8 +10,8 @@ def home():
         context = request.form.get("para")
         question = request.form.get("qa")
         # Make predictions with the model
-        tokenizer = AutoTokenizer.from_pretrained("https://drive.google.com/drive/u/1/folders/1xKrDyY5DNGoRhSOv50qkbk6r0MbQZuHi")
-        model = AutoModelForQuestionAnswering.from_pretrained("https://drive.google.com/drive/u/1/folders/1xKrDyY5DNGoRhSOv50qkbk6r0MbQZuHi")
+        tokenizer = AutoTokenizer.from_pretrained("deepset/roberta-base-squad2")
+        model = AutoModelForQuestionAnswering.from_pretrained("deepset/roberta-base-squad2")
         question_answerer = pipeline("question-answering", model = model, tokenizer= tokenizer)
         return render_template('index.html',qa=question,para=context,message=question_answerer(question=question, context = context)['answer'])
     return render_template('index.html')
